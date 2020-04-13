@@ -12,7 +12,7 @@ import (
 type Handler struct {
 }
 
-func (*Handler) UploadFile(ctx *gin.Context) {
+func (h *Handler) UploadFile(ctx *gin.Context) {
 	file, handler, err := ctx.Request.FormFile("file")
 	if err != nil {
 		ctx.String(http.StatusBadRequest, fmt.Sprintf("get file err: %s", err))
@@ -32,9 +32,17 @@ func (*Handler) UploadFile(ctx *gin.Context) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	filepath := "http://127.0.0.1:8000/file/" + fileName
 
-	ctx.JSON(http.StatusOK, gin.H{
-		"filepath": filepath,
-	})
+	//filepath := "http://127.0.0.1:8000/file/" + fileName
+
+
+	//ctx.JSON(http.StatusOK, gin.H{
+	//	"filepath": filepath,
+	//})
+
+	ctx.Redirect(http.StatusOK, "/file/suc")
+}
+
+func (h *Handler) UploadSucHandler(ctx *gin.Context) {
+	ctx.String(http.StatusOK, "Upload finished!")
 }
