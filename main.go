@@ -1,28 +1,32 @@
 package main
 
 import (
-	"cloud_storage/controller"
-	"github.com/gin-gonic/gin"
+	"cloud_storage/handler"
 	"net/http"
 )
 
 func main() {
 
-	router := gin.Default()
-	//router.StaticFile()
-	router.LoadHTMLGlob("static/view/*")
-	router.Static("/static", "./static")
+	//router := gin.Default()
+	////router.StaticFile()
+	//router.LoadHTMLGlob("static/view/*")
+	//router.Static("/static", "./static")
+	//
+	//router.GET("/", func(c *gin.Context) {
+	//	c.HTML(http.StatusOK, "home.html", gin.H{})
+	//})
+	//
+	//file := router.Group("file")
+	//{
+	//	this := new(controller.Handler)
+	//	file.POST("upload", this.UploadFile)
+	//	file.POST("suc", this.UploadSucHandler)
+	//}
 
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{})
-	})
+	//router.Run(":9090")
 
-	file := router.Group("file")
-	{
-		this := new(controller.Handler)
-		file.POST("upload", this.UploadFile)
-		file.POST("suc", this.UploadSucHandler)
-	}
+	http.HandleFunc("/file/upload", handler.UploadHandle)
+	http.HandleFunc("/file/upload/suc", handler.UploadSucHandle)
 
-	router.Run(":9090")
+	http.ListenAndServe(":9090", nil)
 }
