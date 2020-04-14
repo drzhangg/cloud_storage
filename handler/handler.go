@@ -3,11 +3,13 @@ package handler
 import (
 	"cloud_storage/meta"
 	"cloud_storage/util"
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 )
 
@@ -30,10 +32,10 @@ func UploadHandle(w http.ResponseWriter, r *http.Request) {
 		fileMeta := meta.FileMeta{
 			FileName: handle.Filename,
 			Location: "/tmp/" + handle.Filename,
-			UploadAt: time.Now().Format("2006-01-02 15:"),
+			UploadAt: time.Now().Format("2006-01-02 15:04:05"),
 		}
 
-		newFile, err := os.Create(fileMeta.FileName)
+		newFile, err := os.Create(fileMeta.Location)
 		if err != nil {
 			fmt.Printf("Failed to create file, err:%s\n", err.Error())
 			return
@@ -54,6 +56,62 @@ func UploadHandle(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// UploadSucHandle：上传已完成
 func UploadSucHandle(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "Upload file success!")
+}
+
+// GetFileMetaHandler:获取文件元信息
+func GetFileMetaHandler(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+
+	filehash := r.Form["filehash"][0]
+
+	fileMeta := meta.GetFileMeta(filehash)
+	data, err := json.Marshal(fileMeta)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.Write(data)
+}
+
+// FileQueryHandler: 查询批量的文件元信息
+func FileQueryHandler(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+
+	limitCnt, _ := strconv.Atoi(r.Form.Get("limit"))
+	fileMetas := meta.GetLastFileMeta(limitCnt)
+	data, err := json.Marshal(fileMetas)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.Write(data)
+}
+
+// DownloadHandler：实现文件下载接口
+func DownloadHandler(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+
+	fsha1 := r.Form.Get("filehash")
+
+	fileMeta := meta.GetFileMeta(fsha1)
+
+	file, err := os.Open(fileMeta.Location)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	defer file.Close()
+
+	data, err := ioutil.ReadAll(file)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/octect-stream")
+	w.Header().Set("Content-Description", "attachment;filename=\""+fileMeta.FileName+"\"")
+	w.Write(data)
 }

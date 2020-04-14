@@ -1,5 +1,9 @@
 package meta
 
+import (
+	"sort"
+)
+
 /**
 文件元信息：
 */
@@ -27,3 +31,16 @@ func UpdateFileMeta(fmeta FileMeta) {
 func GetFileMeta(fileSha1 string) FileMeta {
 	return fileMetas[fileSha1]
 }
+
+// GetLastFileMeta：获取批量的文件元信息列表
+func GetLastFileMeta(count int) []FileMeta {
+	fileMetaArr := make([]FileMeta, len(fileMetas))
+	for _, v := range fileMetas {
+		fileMetaArr = append(fileMetaArr, v)
+	}
+
+	sort.Sort(ByUploadTime(fileMetaArr))
+	return fileMetaArr[0:count]
+}
+
+

@@ -27,6 +27,9 @@ func main() {
 
 	http.HandleFunc("/file/upload", handler.UploadHandle)
 	http.HandleFunc("/file/upload/suc", handler.UploadSucHandle)
+	http.HandleFunc("/file/meta", handler.GetFileMetaHandler)
+	http.HandleFunc("/file/query", handler.FileQueryHandler)
+	http.HandleFunc("/file/download", handler.DownloadHandler)
 
 	http.ListenAndServe(":9090", nil)
 }
