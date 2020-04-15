@@ -30,6 +30,8 @@ func main() {
 	http.HandleFunc("/file/meta", handler.GetFileMetaHandler)
 	http.HandleFunc("/file/query", handler.FileQueryHandler)
 	http.HandleFunc("/file/download", handler.DownloadHandler)
+	http.HandleFunc("/file/update", handler.FileMetaUploadHandler)
+	http.HandleFunc("/file/delete", handler.FileDeleteHandler)
 
 	http.ListenAndServe(":9090", nil)
 }

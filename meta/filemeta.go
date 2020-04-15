@@ -43,4 +43,7 @@ func GetLastFileMeta(count int) []FileMeta {
 	return fileMetaArr[0:count]
 }
 
-
+// RemoveFileMeta：删除元信息
+func RemoveFileMeta(fileSha1 string) {
+	delete(fileMetas, fileSha1)
+}
