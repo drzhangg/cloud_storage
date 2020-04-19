@@ -34,3 +34,13 @@ create table `tbl_user`(
   unique key `idx_phone` (`phone`),
   key `idx_status` (`status`)
 )engine=InnoDB auto_increment=5 default charset=utf8mb4;
+
+
+-- 用户token --
+create table `tbl_user_token`(
+  `id` int(11) not null auto_increment,
+  `user_name` varchar(64) not null default '' comment '用户名',
+  `user_token` char(40) not null default '' comment '用户登录token',
+  primary key (`id`),
+  unique key `idx_username` (`user_name`)
+)engine=InnoDB default charset=utf8mb4;

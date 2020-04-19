@@ -42,7 +42,27 @@ func UserSignin(username, encpwd string) bool {
 		return false
 	}
 
-	fmt.Println("user:-----",user)
+	fmt.Println("user:-----", user)
 
 	return false
+}
+
+// UpdateToken：刷新用户登录的token
+func UpdateToken(username string, token string) bool {
+	var (
+		sql string
+	)
+
+	sql = `replace into tbl_user_token (user_name,user_token) values ("%s","%s")`
+	sql = fmt.Sprintf(username, token)
+	stmt := db.DBConn().Exec(sql)
+	if stmt.Error != nil {
+		fmt.Println("Failed to replace,err:" + stmt.Error.Error())
+		return false
+	}
+
+	if stmt.RowsAffected <= 0 {
+		return false
+	}
+	return true
 }

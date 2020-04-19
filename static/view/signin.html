@@ -93,7 +93,7 @@
           alert(err);
         },
         success: function (body) {
-          console.log(body)
+          console.log(body.data)
           localStorage.setItem("token", body.data.Token)
           localStorage.setItem("username", body.data.Username)
           // 增加上传入口ip:port

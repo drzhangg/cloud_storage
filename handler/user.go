@@ -7,6 +7,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"time"
 )
 
 var pwd_salt = "#089"
@@ -68,7 +69,8 @@ func SiginInHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//2.生成访问凭证(token)
-
+	token := GenToken(username)
+	db.UpdateToken(username, token)
 	//3.登录成功后重定向到首页
 }
 
@@ -82,4 +84,12 @@ func RedirectSignin(w http.ResponseWriter, r *http.Request) {
 		}
 		io.WriteString(w, string(datas))
 	}
+}
+
+//GenToken：生成访问凭证（token）
+func GenToken(username string) string {
+	//40位字符：md5(username + timestamp + token_salt ) + timestamp[:8]
+	ts := fmt.Sprintf("%x", time.Now().Unix())
+	tokenPrefix := util.MD5([]byte(username + ts + "_tokensalt"))
+	return tokenPrefix + ts[:8]
 }
