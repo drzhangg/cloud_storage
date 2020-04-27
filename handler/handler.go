@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"time"
 
-	dblayer "filestore/db"
-	"filestore/meta"
-	"filestore/util"
+	dblayer "cloud_storage/db"
+	"cloud_storage/meta"
+	"cloud_storage/util"
 )
 
 // UploadHandler ： 处理文件上传

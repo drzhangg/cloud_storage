@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"filestore/common"
-	"filestore/util"
+	"cloud_storage/common"
+	"cloud_storage/util"
 	"net/http"
 )
 

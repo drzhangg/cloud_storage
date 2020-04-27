@@ -1,7 +1,7 @@
 package main
 
 import (
-	"filestore/handler"
+	"cloud_storage/handler"
 	"fmt"
 	"net/http"
 )
@@ -11,6 +11,7 @@ func main() {
 	http.Handle("/static/",
 		http.StripPrefix("/static/",
 			http.FileServer(http.Dir("./static"))))
+
 
 	// 动态接口路由设置
 	http.HandleFunc("/file/upload", handler.UploadHandler)

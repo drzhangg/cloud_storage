@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	mydb "filestore/db/mysql"
+	mydb "cloud_storage/db/mysql"
 )
 
 // TableFile : 文件表对应的一些字段

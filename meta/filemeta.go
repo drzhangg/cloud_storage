@@ -3,7 +3,7 @@ package meta
 import (
 	"sort"
 
-	mydb "filestore/db"
+	mydb "cloud_storage/db"
 )
 
 // FileMeta : 文件元信息结构

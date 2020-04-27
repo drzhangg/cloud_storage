@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	dblayer "filestore/db"
-	"filestore/util"
+	dblayer "cloud_storage/db"
+	"cloud_storage/util"
 )
 
 const (

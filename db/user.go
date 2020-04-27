@@ -1,7 +1,7 @@
 package db
 
 import (
-	mydb "filestore/db/mysql"
+	mydb "cloud_storage/db/mysql"
 	"fmt"
 )
 
