@@ -14,7 +14,6 @@ func (a ByUploadTime) Swap(i, j int) {
 	a[i], a[j] = a[j], a[i]
 }
 
-//根据时间排序，时间越大排名越靠前
 func (a ByUploadTime) Less(i, j int) bool {
 	iTime, _ := time.Parse(baseFormat, a[i].UploadAt)
 	jTime, _ := time.Parse(baseFormat, a[j].UploadAt)
