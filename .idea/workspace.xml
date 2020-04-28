@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1357a3-30c6-496e-b89c-64e87530d1e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/userfile.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/userfile.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta/filemeta.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta/filemeta.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +45,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -99,22 +91,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="543" height="466" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1587045044199" />
-    <state width="1398" height="188" key="GridCell.Tab.0.bottom" timestamp="1587953028514">
+    <state width="1398" height="170" key="GridCell.Tab.0.bottom" timestamp="1587953276951">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587953028514" />
-    <state width="1398" height="188" key="GridCell.Tab.0.center" timestamp="1587953028513">
+    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587953276951" />
+    <state width="1398" height="170" key="GridCell.Tab.0.center" timestamp="1587953276950">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587953028513" />
-    <state width="1398" height="188" key="GridCell.Tab.0.left" timestamp="1587953028512">
+    <state width="1398" height="170" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587953276950" />
+    <state width="1398" height="170" key="GridCell.Tab.0.left" timestamp="1587953276949">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587953028512" />
-    <state width="1398" height="188" key="GridCell.Tab.0.right" timestamp="1587953028514">
+    <state width="1398" height="170" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587953276949" />
+    <state width="1398" height="170" key="GridCell.Tab.0.right" timestamp="1587953276950">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587953028514" />
+    <state width="1398" height="170" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587953276950" />
     <state width="1398" height="188" key="GridCell.Tab.1.bottom" timestamp="1587953028523">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -135,18 +127,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="308" y="203" key="IDE.errors.dialog/0.23.1440.877@0.23.1440.877" timestamp="1587952973605" />
-    <state x="229" y="100" key="SettingsEditor" timestamp="1587953191176">
+    <state x="229" y="100" key="SettingsEditor" timestamp="1587953219294">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1587953191176" />
+    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1587953219294" />
     <state x="265" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1587045148325">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="265" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1587045148325" />
-    <state x="421" y="218" width="598" height="538" key="find.popup" timestamp="1587952861956">
+    <state x="421" y="218" width="598" height="538" key="find.popup" timestamp="1588053879643">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="421" y="218" width="598" height="538" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1587952861956" />
+    <state x="421" y="218" width="598" height="538" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1588053879643" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1587096240551">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
