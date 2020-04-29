@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1357a3-30c6-496e-b89c-64e87530d1e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +19,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go/1.13.5/libexec" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -45,7 +46,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -75,6 +76,10 @@
     <auto-vendoring-mode>false</auto-vendoring-mode>
   </component>
   <component name="WindowStateProjectService">
+    <state x="520" y="398" key="#GOROOT" timestamp="1588077652039">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="520" y="398" key="#GOROOT/0.23.1440.877@0.23.1440.877" timestamp="1588077652039" />
     <state x="467" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586840781075">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -91,22 +96,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="543" height="466" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1587045044199" />
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom" timestamp="1587953276951">
+    <state width="1398" height="170" key="GridCell.Tab.0.bottom" timestamp="1588076734139">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587953276951" />
-    <state width="1398" height="170" key="GridCell.Tab.0.center" timestamp="1587953276950">
+    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588076734139" />
+    <state width="1398" height="170" key="GridCell.Tab.0.center" timestamp="1588076734137">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587953276950" />
-    <state width="1398" height="170" key="GridCell.Tab.0.left" timestamp="1587953276949">
+    <state width="1398" height="170" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588076734137" />
+    <state width="1398" height="170" key="GridCell.Tab.0.left" timestamp="1588076734136">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587953276949" />
-    <state width="1398" height="170" key="GridCell.Tab.0.right" timestamp="1587953276950">
+    <state width="1398" height="170" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588076734136" />
+    <state width="1398" height="170" key="GridCell.Tab.0.right" timestamp="1588076734138">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587953276950" />
+    <state width="1398" height="170" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588076734138" />
     <state width="1398" height="188" key="GridCell.Tab.1.bottom" timestamp="1587953028523">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -127,10 +132,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="308" y="203" key="IDE.errors.dialog/0.23.1440.877@0.23.1440.877" timestamp="1587952973605" />
-    <state x="229" y="100" key="SettingsEditor" timestamp="1587953219294">
+    <state x="229" y="100" key="SettingsEditor" timestamp="1588077666468">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1587953219294" />
+    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588077666468" />
     <state x="265" y="197" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1587045148325">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -139,10 +144,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="421" y="218" width="598" height="538" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1588053879643" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1587096240551">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1588150757346">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1587096240551" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1588150757346" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

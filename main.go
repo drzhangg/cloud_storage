@@ -28,6 +28,11 @@ func main() {
 	http.HandleFunc("/user/signin", handler.SignInHandler)
 	http.HandleFunc("/user/info", handler.HTTPInterceptor(handler.UserInfoHandler))
 
+	//分块上传
+	http.HandleFunc("/file/mpupload/init", handler.InitialMultipartUploadHandler)
+	http.HandleFunc("/file/mpupload/uppart", handler.UploadPartHandler)
+	http.HandleFunc("/file/mpupload/complete", handler.CompleteUploadHandler)
+
 	// 监听端口
 	fmt.Println("上传服务正在启动, 监听端口:8080...")
 	err := http.ListenAndServe(":8080", nil)
